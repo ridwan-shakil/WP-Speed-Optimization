@@ -12,15 +12,65 @@ NOTES
   loading from media library , download them > upload them > and set to there place
   [ it's important because if they are not loading from media library , we can not optimize them ]
 
+
 ===========================
 Steps
 ===========================
----------- After every step take a note of speed ----------
-
 * permalink flash ( url rewrite, .htaccess is ready )
 * regenrate thumbnail plugin ( new theme & plugins may register new image sizing ,
   our old images that are in media library we have to regenrate them ,
   so they get the new sizes ) 
 * smush plugin ( whenever uploading a new image it will compress the image,
   lazy loading  & other image optimizations )
-* 
+------ CHECK THE SCORE & NOTE IT DOWN ------
+
+
+=========== Webp ( Next gen. image format ) ===========
+* download 'webp express' plugin ( it will serve images in webp format on the fly ) ( it will work with lightspeed , appache server but with enginex server we will have to make some configaration )    
+* settings > webp express > save setting 
+------ CHECK THE SCORE & NOTE IT DOWN ------
+
+
+========== Cpanal ========
+If has scope do the below tasks
+* Increas php version ( select php version > select latest version > click 'set as current 
+* Increas memory limit ( options > increase memory limit ) ( increase file upload limit )
+* Enable necessery extensions ( zip, imagick, gd )
+* Cpanel > Optimize website > select Compress all content > click upload setting ( Whenever 
+  any risponse go from our server to client browser , it will go in the compressed form ,
+  so it will reduce bandwidth usage )
+------ CHECK THE SCORE & NOTE IT DOWN ------
+
+
+========= jQuery =========
+* Update jQuery into latest version
+* download " jquery manager " plugin > tools > jquery manager > 'select jquery version' > save
+  incognito window > test if there is any error showing on 'console' ? if yes . then change the version and check again
+------ CHECK THE SCORE & NOTE IT DOWN ------
+  
+========= Ensure text remains visible during webfont load ========
+( This error means: If any external fonts has been added , the text may not show before loading the font ) 
+* solution 1 : where the font is linking > at the end there should be added : font-display: swap;  //search google
+* solution 2 : download 'Swap Google Fonts Display' plugin & all done  
+ ------- CHECK THE SCORE & NOTE IT DOWN ------
+
+--------------------------------------------------------- Browser Cashing --------------------------------------------------------------
+
+========= Wp super cache  & Fast Velocity Minify plugin ( for cashing & minification )( Ref.video No 2.10 )
+* wp super cashe install > check recomended settings 
+* Fast velocity minify install > 
+after doing chages > purge chshe 
+------ CHECK THE SCORE 2 times ( 2nd time will load from cash ) & NOTE IT DOWN ------
+
+
+
+OR ========== Lightspeed cashe plugin ======== ( Ref.video No 2.12 )
+* Install lightspeed Plugin > 
+
+------ CHECK THE SCORE 2 times ( 2nd time will load from cash ) & NOTE IT DOWN ------
+
+
+
+
+
+
