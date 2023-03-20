@@ -1,0 +1,26 @@
+1) light hous crome extension 
+2) wp server stats plugin ( to see all statistics )
+3) wp reset plugin ( to take snapshot & rollback )
+
+4) Must mentain a checklist ( what you are doing & what is the impact ) 
+
+===========================
+NOTES
+===========================
+* all the images should load from media library , not from plugin directory or theme dir.
+  (open image in a new tab) if the link has 'plugin' or 'theme' keyword , it means they aren't 
+  loading from media library , download them > upload them > and set to there place
+  [ it's important because if they are not loading from media library , we can not optimize them ]
+
+===========================
+Steps
+===========================
+---------- After every step take a note of speed ----------
+
+* permalink flash ( url rewrite, .htaccess is ready )
+* regenrate thumbnail plugin ( new theme & plugins may register new image sizing ,
+  our old images that are in media library we have to regenrate them ,
+  so they get the new sizes ) 
+* smush plugin ( whenever uploading a new image it will compress the image,
+  lazy loading  & other image optimizations )
+* 
