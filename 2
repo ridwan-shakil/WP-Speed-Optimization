@@ -11,18 +11,24 @@ NOTES
   (open image in a new tab) if the link has 'plugin' or 'theme' keyword , it means they aren't 
   loading from media library , download them > upload them > and set to there place
   [ it's important because if they are not loading from media library , we can not optimize them ]
-
-
-===========================
-Steps
-===========================
 * permalink flash ( url rewrite, .htaccess is ready )
-* regenrate thumbnail plugin ( new theme & plugins may register new image sizing ,
-  our old images that are in media library we have to regenrate them ,
-  so they get the new sizes ) 
-* smush plugin ( whenever uploading a new image it will compress the image,
-  lazy loading  & other image optimizations )
------- CHECK THE SCORE & NOTE IT DOWN ------
+
+===========================
+Download below plugins 
+===========================
+1) regenrate thumbnail:  ( new theme & plugins may register new image sizing ,  our old images that are in media library we have to regenrate them ,  so they get the new sizes ) 
+2) smush  :              ( whenever uploading a new image it will compress the image,  lazy loading  & other image optimizations )
+3) jquery manager :      ( Update jQuery into latest version )
+---------------------------
+Setup above plugins 
+--------------------------
+Regenrate thumbnail > click regenrate all thumbnails 
+smush  > bulk smush 
+tools > jquery manager > 'select jquery version' > save > incognito window > test if there is any error showing on 'console' ? if yes . then change the version and check again
+
+
+
+
 
 
 =========== Webp ( Next gen. image format ) ===========
@@ -42,11 +48,7 @@ If has scope do the below tasks
 ------ CHECK THE SCORE & NOTE IT DOWN ------
 
 
-========= jQuery =========
-* Update jQuery into latest version
-* download " jquery manager " plugin > tools > jquery manager > 'select jquery version' > save
-  incognito window > test if there is any error showing on 'console' ? if yes . then change the version and check again
------- CHECK THE SCORE & NOTE IT DOWN ------
+
   
 ========= Ensure text remains visible during webfont load ========
 ( This error means: If any external fonts has been added , the text may not show before loading the font ) 
