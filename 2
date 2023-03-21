@@ -50,8 +50,10 @@ If has scope do the below tasks
   
 ========= Ensure text remains visible during webfont load ========
 ( This error means: If any external fonts has been added , the text may not show before loading the font ) 
-* solution 1 : where the font is linking > at the end there should be added : font-display: swap;  //search google
-* solution 2 : download 'Swap Google Fonts Display' plugin & all done  
+*** solution 1 : Ligtspeed cashe plugin has it by default
+* solution 2 : where the font is linking > at the end there should be added : font-display: swap;  //search google
+* solution 3 : download 'Swap Google Fonts Display' plugin & all done  
+ 
  ------- CHECK THE SCORE & NOTE IT DOWN ------
 
 --------------------------------------------------------- Browser Cashing --------------------------------------------------------------
@@ -64,10 +66,46 @@ after doing chages > purge chshe
 
 
 
-OR ========== Lightspeed cashe plugin ======== ( Ref.video No 2.12 )
-* Install lightspeed Plugin > 
 
+OR ========== Lightspeed cashe plugin ======== ( Ref.video No 2.12 )
+* Install lightspeed Plugin 
+Tool box: 
+        Import setup (that you have exported previously ) check if there any error , check speed , do necessery changes 
+        
+      cashe = all
+      TTL = more than 4 week ( how long browser cashe will remain )
+      Browser cashe = on
+      cdn > load jquery remotly = google ( jquery will load from google cdn )
+      go to ( https://tools.keycdn.com/http2-test ) this link and check if your site has 'http2' support or not ?
+      lazy load image = on ( may not work when CDN is on )
+
+      js, css = minify 
+      js, css = Combine (Will reduce number of requests ) ( may create error , check consol) 
+      load inline js = deferred ( may solve js error )
+ 
+page optimization:
+      html minify = on
+      inline css minify = on
+      inline js minify = on
+      load google fonts asyncronously = on
+      Remove wordpress Emoji = on
+      
+      gravater cashe = on 
+      combined css priority = on ( css that has been combined will load before other css )
+      Role excludes = select ( admin, editor, author )
+      Font Display Optimization = select ( Swap )
+      
+Genral :
+      Domain key = Genrate domain key ( wait for a while ) > save 
+CDN :
+      Quick cloud cdn = on > save
+      
+Tool box: 
+        Export setup ( son next time just import the setup , check if there any error , check speed , do necessery changes )
+        
+------------------- Purge all after every changes --------------
 ------ CHECK THE SCORE 2 times ( 2nd time will load from cash ) & NOTE IT DOWN ------
+
 
 
 
